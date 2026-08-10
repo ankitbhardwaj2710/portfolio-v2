@@ -7,6 +7,7 @@ import Loader from "./components/Loader";
 import Hero from "./sections/Hero";
 import FlatFlow from "./sections/FlatFlow";
 import Journey from "./sections/Journey";
+import Projects from "./sections/Projects";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -48,6 +49,7 @@ function App() {
         <main>
           <Hero />
           <Journey />
+          <Projects />
           <FlatFlow />
           {/* <section className="future-section" id="projects">
             <span>02</span>

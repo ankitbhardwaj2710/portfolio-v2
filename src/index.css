@@ -2356,3 +2356,594 @@ body::before {
     box-shadow: 0 0 12px #8b5cf6;
   }
 }
+/* ========================================
+   PROJECTS — COSMIC SHOWCASE
+======================================== */
+
+.projects-section {
+  position: relative;
+  z-index: 4;
+  min-height: 100vh;
+  padding: 150px 5vw 100px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 35%,
+      rgba(124, 58, 237, 0.09),
+      transparent 42%
+    ),
+    #030305;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.projects-heading {
+  max-width: 1180px;
+  margin: 0 auto 70px;
+}
+
+.projects-kicker {
+  color: #a855f7;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.projects-heading h2 {
+  margin-top: 22px;
+  color: #f5f5f7;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+  font-weight: 600;
+}
+
+.projects-heading h2 span {
+  color: #71717a;
+}
+
+.projects-heading p {
+  max-width: 520px;
+  margin-top: 30px;
+  color: #777780;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   FEATURED
+======================================== */
+
+.featured-project {
+  position: relative;
+
+  max-width: 1180px;
+  min-height: 480px;
+
+  margin: 0 auto 80px;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 25% 50%,
+      rgba(139, 92, 246, 0.12),
+      transparent 38%
+    ),
+    rgba(255, 255, 255, 0.018);
+
+  overflow: hidden;
+}
+
+.featured-project::before {
+  content: "01";
+
+  position: absolute;
+  top: 24px;
+  right: 30px;
+
+  color: rgba(255, 255, 255, 0.08);
+
+  font-family: "DM Mono", monospace;
+  font-size: 72px;
+}
+
+/* ========================================
+   FEATURED PLANET
+======================================== */
+
+.featured-project-planet {
+  display: grid;
+  place-items: center;
+  min-height: 430px;
+}
+
+.project-planet {
+  position: relative;
+
+  width: 155px;
+  height: 155px;
+
+  flex-shrink: 0;
+}
+
+.project-planet-featured {
+  width: 260px;
+  height: 260px;
+}
+
+.project-planet-glow {
+  position: absolute;
+  inset: -55px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      color-mix(
+        in srgb,
+        var(--project-color) 28%,
+        transparent
+      ),
+      transparent 70%
+    );
+
+  filter: blur(25px);
+
+  animation: projectGlow 4s ease-in-out infinite;
+}
+
+@keyframes projectGlow {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.project-planet-surface {
+  position: absolute;
+  inset: 14px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 22%,
+      #ffffff 0%,
+      var(--project-color) 12%,
+      #27114f 48%,
+      #030305 100%
+    );
+
+  box-shadow:
+    inset -30px -25px 45px rgba(0, 0, 0, 0.85),
+    inset 12px 10px 25px rgba(255, 255, 255, 0.12),
+    0 0 60px
+      color-mix(
+        in srgb,
+        var(--project-color) 32%,
+        transparent
+      );
+}
+
+.project-planet-featured
+  .project-planet-surface {
+  inset: 22px;
+}
+
+.project-planet-surface span {
+  color: white;
+  font-size: 25px;
+
+  text-shadow:
+    0 0 15px white,
+    0 0 30px var(--project-color);
+}
+
+/* ========================================
+   PLANET RINGS
+======================================== */
+
+.project-planet-ring {
+  position: absolute;
+  inset: -5px;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--project-color) 45%,
+      transparent
+    );
+
+  border-radius: 50%;
+}
+
+.project-ring-one {
+  transform: rotate(28deg) scaleY(0.32);
+
+  animation:
+    projectRingOne 12s linear infinite;
+}
+
+.project-ring-two {
+  transform: rotate(-32deg) scaleY(0.52);
+
+  animation:
+    projectRingTwo 16s linear infinite;
+}
+
+@keyframes projectRingOne {
+  to {
+    transform:
+      rotate(388deg)
+      scaleY(0.32);
+  }
+}
+
+@keyframes projectRingTwo {
+  to {
+    transform:
+      rotate(-392deg)
+      scaleY(0.52);
+  }
+}
+
+/* ========================================
+   FEATURED CONTENT
+======================================== */
+
+.featured-project-content {
+  padding: 55px;
+}
+
+.project-index {
+  color: #55555e;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.project-category {
+  margin-top: 28px;
+
+  color: #a855f7;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.featured-project-content h3 {
+  margin-top: 12px;
+
+  color: #f5f5f7;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+}
+
+.featured-project-content p {
+  max-width: 480px;
+
+  margin-top: 25px;
+
+  color: #85858d;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 22px;
+}
+
+.project-stack span {
+  padding: 7px 11px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 999px;
+
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-top: 30px;
+}
+
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 17px;
+
+  border-radius: 999px;
+
+  background: #8b5cf6;
+
+  color: white;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-actions a:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 35px
+      rgba(139, 92, 246, 0.3);
+}
+
+.project-status {
+  color: #55555e;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+/* ========================================
+   PROJECT GRID
+======================================== */
+
+.projects-orbit-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.project-card {
+  position: relative;
+
+  min-height: 445px;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 14px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      color-mix(
+        in srgb,
+        var(--project-color) 7%,
+        transparent
+      ),
+      transparent 45%
+    ),
+    rgba(255, 255, 255, 0.012);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--project-color) 38%,
+      transparent
+    );
+}
+
+.project-card-top,
+.project-card-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  color: #4f4f58;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+}
+
+.project-card-top span:first-child {
+  color: var(--project-color);
+}
+
+.project-card .project-planet {
+  margin: 50px auto 25px;
+}
+
+.project-card-content {
+  margin-top: auto;
+}
+
+.project-card-content h3 {
+  color: #eeeeef;
+
+  font-size: 25px;
+  letter-spacing: -0.04em;
+}
+
+.project-card-content p {
+  margin-top: 10px;
+
+  color: #707079;
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.project-card-content .project-stack {
+  margin-top: 15px;
+}
+
+.project-card-bottom {
+  margin-top: 22px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+/* ========================================
+   END
+======================================== */
+
+.projects-end {
+  max-width: 1180px;
+
+  margin: 55px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  color: #494950;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.projects-end span {
+  width: 70px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #6d28d9
+    );
+}
+
+.projects-end span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      #6d28d9,
+      transparent
+    );
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+  .projects-section {
+    padding:
+      110px 24px 70px;
+  }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .featured-project-planet {
+    min-height: 330px;
+  }
+
+  .featured-project-content {
+    padding: 30px;
+  }
+
+  .featured-project-content h3 {
+    font-size: 4rem;
+  }
+
+  .projects-orbit-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-heading h2 {
+    font-size: 4rem;
+  }
+
+  .projects-heading p {
+    font-size: 13px;
+  }
+
+  .featured-project-content h3 {
+    font-size: 3.2rem;
+  }
+
+  .featured-project-planet {
+    min-height: 280px;
+  }
+
+  .project-planet-featured {
+    width: 190px;
+    height: 190px;
+  }
+
+  .projects-orbit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 390px;
+  }
+
+  .project-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
