@@ -12,6 +12,12 @@ const coreSkills = [
     description: "Flutter application development",
   },
   {
+  name: "Node.js",
+  type: "BACKEND",
+  category: "BACKEND",
+  className: "skill-node",
+},
+  {
     name: "React",
     type: "FRONTEND",
     level: "PRIMARY",

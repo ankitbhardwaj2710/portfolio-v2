@@ -257,7 +257,7 @@ export default function Journey() {
 
       <div className="journey-certificates">
         <div className="journey-achievements-heading">
-          <span>05 / ACHIEVEMENTS</span>
+          {/* <span>05 / ACHIEVEMENTS</span> */}
 
           <h3>
             Milestones along
