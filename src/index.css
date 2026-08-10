@@ -3482,3 +3482,1993 @@ body::before {
     font-size: 25px;
   }
 }
+/* =========================================================
+   SKILLS — COSMIC TECHNOLOGY SYSTEM
+   Clean / Readable / Premium
+========================================================= */
+
+.skills-section {
+  position: relative;
+  z-index: 4;
+
+  min-height: 100vh;
+
+  padding: 150px 5vw 110px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(124, 58, 237, 0.10),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(88, 28, 135, 0.06),
+      transparent 30%
+    ),
+    #030305;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.skills-heading {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding-bottom: 80px;
+}
+
+.skills-kicker,
+.skills-ecosystem-kicker {
+  display: inline-block;
+
+  color: #a855f7;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.skills-heading h2 {
+  margin: 24px 0 0;
+
+  color: #f5f5f7;
+
+  font-size: clamp(
+    4.2rem,
+    8vw,
+    8rem
+  );
+
+  font-weight: 600;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.075em;
+}
+
+.skills-heading h2 span {
+  color: #6d6d77;
+}
+
+.skills-heading p {
+  max-width: 540px;
+
+  margin: 32px 0 0;
+
+  color: #85858e;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SKILLS UNIVERSE
+========================================================= */
+
+.skills-universe {
+  position: relative;
+
+  width: min(900px, 92vw);
+
+  height: 650px;
+
+  margin: 0 auto 100px;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.skills-orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid
+    rgba(139, 92, 246, 0.17);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-18deg);
+}
+
+.skills-orbit-1 {
+  width: 450px;
+  height: 190px;
+}
+
+.skills-orbit-2 {
+  width: 680px;
+  height: 290px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(25deg);
+}
+
+.skills-orbit-3 {
+  width: 850px;
+  height: 400px;
+
+  opacity: 0.55;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-35deg);
+}
+
+
+/* =========================================================
+   CENTRAL PLANET
+========================================================= */
+
+.skills-core {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 210px;
+  height: 210px;
+
+  display: grid;
+
+  place-items: center;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.skills-core-glow {
+  position: absolute;
+
+  inset: -75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.25),
+      transparent 68%
+    );
+
+  filter: blur(20px);
+
+  animation:
+    skillsCoreGlow
+    4.5s ease-in-out
+    infinite;
+}
+
+@keyframes skillsCoreGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.08);
+  }
+}
+
+.skills-core-planet {
+  position: relative;
+
+  width: 165px;
+  height: 165px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      #ffffff 0%,
+      #c084fc 9%,
+      #7c3aed 28%,
+      #3b0764 55%,
+      #090312 78%,
+      #030305 100%
+    );
+
+  box-shadow:
+    inset -32px -30px 48px
+      rgba(0, 0, 0, 0.82),
+
+    inset 14px 12px 24px
+      rgba(255, 255, 255, 0.13),
+
+    0 0 65px
+      rgba(139, 92, 246, 0.3);
+}
+
+.skills-core-planet span {
+  color: #d8b4fe;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.17em;
+}
+
+.skills-core-planet strong {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.skills-core > small {
+  position: absolute;
+
+  bottom: -60px;
+
+  color: #5d5d67;
+
+  text-align: center;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   SKILL PLANETS
+========================================================= */
+
+.skill-node {
+  position: absolute;
+
+  width: 145px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  animation:
+    skillFloat
+    5.5s ease-in-out
+    var(--skill-delay)
+    infinite;
+}
+
+@keyframes skillFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* INDIVIDUAL POSITIONS */
+
+.skill-node-1 {
+  left: 6%;
+  top: 23%;
+}
+
+.skill-node-2 {
+  left: 27%;
+  top: 1%;
+}
+
+.skill-node-3 {
+  right: 6%;
+  top: 22%;
+}
+
+.skill-node-4 {
+  right: 15%;
+  bottom: 6%;
+}
+
+.skill-node-5 {
+  left: 15%;
+  bottom: 6%;
+}
+
+.skill-node-6 {
+  left: 42%;
+  bottom: -2%;
+}
+
+
+/* PLANET ORBIT */
+
+.skill-node-orbit {
+  position: absolute;
+
+  width: 125px;
+  height: 50px;
+
+  border: 1px solid
+    rgba(168, 85, 247, 0.3);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(-22deg)
+    scaleY(0.5);
+
+  pointer-events: none;
+}
+
+
+/* PLANET */
+
+.skill-node-planet {
+  position: relative;
+
+  width: 86px;
+  height: 86px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 28% 20%,
+      #ffffff 0%,
+      #c084fc 8%,
+      #a855f7 15%,
+      #4c1d95 37%,
+      #17052b 67%,
+      #090312 82%
+    );
+
+  box-shadow:
+    inset -20px -20px 30px
+      rgba(0, 0, 0, 0.78),
+
+    inset 8px 7px 16px
+      rgba(255, 255, 255, 0.09),
+
+    0 0 30px
+      rgba(139, 92, 246, 0.22);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.skill-node:hover {
+  z-index: 10;
+}
+
+.skill-node:hover .skill-node-planet {
+  transform: scale(1.14);
+
+  box-shadow:
+    inset -20px -20px 30px
+      rgba(0, 0, 0, 0.72),
+
+    0 0 48px
+      rgba(168, 85, 247, 0.52);
+}
+
+.skill-node-planet span {
+  color: #ffffff;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  text-shadow:
+    0 0 14px
+    rgba(255, 255, 255, 0.7);
+}
+
+
+/* PLANET LABEL */
+
+.skill-node-info {
+  margin-top: 18px;
+
+  text-align: center;
+}
+
+.skill-node-info strong {
+  display: block;
+
+  color: #eeeeef;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+.skill-node-info small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #666670;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   CORE TECHNOLOGIES LIST
+========================================================= */
+
+.skills-list {
+  max-width: 1180px;
+
+  margin: 0 auto 100px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+/* LIST HEADER */
+
+.skills-list-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  color: #666670;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* ROW */
+
+.skill-row {
+  display: grid;
+
+  grid-template-columns:
+    60px
+    minmax(180px, 1.2fr)
+    minmax(120px, 0.9fr)
+    minmax(260px, 2fr)
+    110px;
+
+  align-items: center;
+
+  min-height: 92px;
+
+  column-gap: 25px;
+
+  padding: 12px 0;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.skill-row:hover {
+  padding-left: 14px;
+
+  padding-right: 14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.055),
+      rgba(139, 92, 246, 0.015),
+      transparent
+    );
+
+  border-top-color:
+    rgba(168, 85, 247, 0.18);
+}
+
+
+/* NUMBER */
+
+.skill-row-number {
+  color: #8b5cf6;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* NAME */
+
+.skill-row strong {
+  color: #eeeeef;
+
+  font-size: 21px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* CATEGORY */
+
+.skill-row-type {
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* DESCRIPTION */
+
+.skill-row-description {
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* LEVEL */
+
+.skill-row-level {
+  justify-self: end;
+
+  color: #b36cff;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+========================================================= */
+
+.skills-ecosystem {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.75fr)
+    minmax(450px, 1.25fr);
+
+  align-items: center;
+
+  gap: 90px;
+
+  padding: 65px 0;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* ECOSYSTEM TITLE */
+
+.skills-ecosystem h3 {
+  margin: 22px 0 0;
+
+  color: #eeeeef;
+
+  font-size: 46px;
+
+  font-weight: 600;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.06em;
+}
+
+.skills-ecosystem h3 span {
+  color: #686871;
+}
+
+
+/* TAGS */
+
+.ecosystem-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-content: center;
+
+  gap: 10px;
+}
+
+.ecosystem-tags span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 999px;
+
+  color: #85858e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ecosystem-tags span:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(168, 85, 247, 0.45);
+
+  background:
+    rgba(139, 92, 246, 0.06);
+
+  transform: translateY(-3px);
+}
+
+.ecosystem-tags small {
+  color: #8b5cf6;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SECTION END
+========================================================= */
+
+.skills-end {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 55px;
+
+  color: #505059;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.skills-end span {
+  width: 75px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #6d28d9
+    );
+}
+
+.skills-end span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      #6d28d9,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .skills-section {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .skills-universe {
+    transform: scale(0.9);
+
+    transform-origin: center top;
+
+    margin-bottom: 20px;
+  }
+
+  .skill-row {
+    grid-template-columns:
+      50px
+      1.2fr
+      0.8fr
+      1.6fr
+      90px;
+
+    column-gap: 18px;
+  }
+
+  .skills-ecosystem {
+    gap: 55px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .skills-section {
+    padding:
+      120px 28px 80px;
+  }
+
+  .skills-heading {
+    padding-bottom: 55px;
+  }
+
+  .skills-heading h2 {
+    font-size:
+      clamp(3.8rem, 10vw, 6rem);
+  }
+
+  .skills-heading p {
+    font-size: 14px;
+  }
+
+
+  /* Universe */
+
+  .skills-universe {
+    width: 100%;
+
+    height: 560px;
+
+    transform: scale(0.82);
+
+    transform-origin: center top;
+
+    margin-bottom: -20px;
+  }
+
+
+  .skill-node-1 {
+    left: 0;
+  }
+
+  .skill-node-3 {
+    right: 0;
+  }
+
+
+  /* List */
+
+  .skill-row {
+    grid-template-columns:
+      50px
+      minmax(150px, 1fr)
+      100px;
+
+    column-gap: 18px;
+
+    min-height: 82px;
+  }
+
+  .skill-row-type,
+  .skill-row-description {
+    display: none;
+  }
+
+  .skill-row-level {
+    justify-self: end;
+  }
+
+
+  /* Ecosystem */
+
+  .skills-ecosystem {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 50px 0;
+  }
+
+  .skills-ecosystem h3 {
+    font-size: 40px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .skills-section {
+    padding:
+      100px 20px 65px;
+  }
+
+
+  /* Heading */
+
+  .skills-heading {
+    padding-bottom: 35px;
+  }
+
+  .skills-kicker,
+  .skills-ecosystem-kicker {
+    font-size: 9px;
+  }
+
+  .skills-heading h2 {
+    margin-top: 18px;
+
+    font-size:
+      clamp(3.2rem, 15vw, 4.5rem);
+
+    line-height: 0.88;
+  }
+
+  .skills-heading p {
+    margin-top: 24px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Universe */
+
+  .skills-universe {
+    height: 500px;
+
+    transform: scale(0.62);
+
+    transform-origin: center top;
+
+    margin-bottom: -100px;
+  }
+
+
+  /* Core */
+
+  .skills-core-planet {
+    width: 155px;
+    height: 155px;
+  }
+
+
+  /* List */
+
+  .skills-list {
+    margin-top: 0;
+
+    margin-bottom: 65px;
+  }
+
+  .skills-list-header {
+    padding: 17px 0;
+
+    font-size: 8px;
+  }
+
+  .skill-row {
+    grid-template-columns:
+      38px
+      1fr
+      auto;
+
+    min-height: 75px;
+
+    column-gap: 12px;
+
+    padding: 12px 0;
+  }
+
+  .skill-row:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .skill-row-number {
+    font-size: 9px;
+  }
+
+  .skill-row strong {
+    font-size: 17px;
+  }
+
+  .skill-row-level {
+    font-size: 8px;
+  }
+
+
+  /* Ecosystem */
+
+  .skills-ecosystem {
+    gap: 30px;
+
+    padding: 42px 0;
+  }
+
+  .skills-ecosystem h3 {
+    font-size: 34px;
+
+    line-height: 0.98;
+  }
+
+  .ecosystem-tags {
+    gap: 8px;
+  }
+
+  .ecosystem-tags span {
+    padding: 10px 13px;
+
+    font-size: 9px;
+  }
+
+  .ecosystem-tags small {
+    font-size: 7px;
+  }
+
+
+  /* End */
+
+  .skills-end {
+    gap: 10px;
+
+    margin-top: 40px;
+
+    font-size: 7px;
+  }
+
+  .skills-end span {
+    width: 45px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .skills-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .skills-heading h2 {
+    font-size: 3rem;
+  }
+
+  .skills-universe {
+    transform: scale(0.55);
+
+    margin-bottom: -125px;
+  }
+
+  .skill-row strong {
+    font-size: 15px;
+  }
+
+  .skill-row-level {
+    font-size: 7px;
+  }
+
+  .skills-ecosystem h3 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   CONTACT — CLEAN COSMIC ENDING
+========================================================= */
+
+.contact-section {
+  position: relative;
+  z-index: 4;
+
+  min-height: 100vh;
+
+  padding: 145px 5vw 32px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(124, 58, 237, 0.11),
+      transparent 34%
+    ),
+    #030305;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.contact-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 38%;
+
+  width: 500px;
+  height: 500px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.13),
+      transparent 68%
+    );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VERY SUBTLE ORBITS
+========================================================= */
+
+.contact-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 37%;
+
+  border: 1px solid
+    rgba(139, 92, 246, 0.09);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0.6;
+}
+
+.contact-orbit-1 {
+  width: 560px;
+  height: 190px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(18deg);
+}
+
+.contact-orbit-2 {
+  width: 780px;
+  height: 290px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-25deg);
+
+  opacity: 0.35;
+}
+
+.contact-orbit-3 {
+  width: 980px;
+  height: 380px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(30deg);
+
+  opacity: 0.18;
+}
+
+
+/* =========================================================
+   SUBTLE PLANET
+========================================================= */
+
+.contact-planet {
+  position: absolute;
+
+  left: 50%;
+  top: 37%;
+
+  width: 125px;
+  height: 125px;
+
+  transform: translate(-50%, -50%);
+
+  display: grid;
+
+  place-items: center;
+
+  pointer-events: none;
+
+  opacity: 0.28;
+
+  z-index: 0;
+}
+
+.contact-planet-core {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 22%,
+      rgba(255, 255, 255, 0.9),
+      rgba(192, 132, 252, 0.7) 9%,
+      rgba(109, 40, 217, 0.65) 28%,
+      rgba(46, 16, 101, 0.55) 55%,
+      rgba(3, 3, 5, 0.2) 78%
+    );
+
+  box-shadow:
+    0 0 45px
+      rgba(139, 92, 246, 0.22);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.contact-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.contact-kicker {
+  display: inline-block;
+
+  color: #a855f7;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.contact-content h2 {
+  position: relative;
+
+  margin: 24px auto 0;
+
+  max-width: 850px;
+
+  color: #f5f5f7;
+
+  font-size:
+    clamp(5rem, 9vw, 9rem);
+
+  font-weight: 600;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.085em;
+}
+
+.contact-content h2 span {
+  color: #707079;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.contact-description {
+  max-width: 560px;
+
+  margin: 34px auto 0;
+
+  color: #85858e;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.contact-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 30px;
+
+  padding:
+    15px 18px 15px 24px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  border: 1px solid
+    rgba(192, 132, 252, 0.35);
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 0 35px
+    rgba(124, 58, 237, 0.2);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 50px
+    rgba(139, 92, 246, 0.38);
+}
+
+.contact-arrow {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
+
+.contact-links {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: auto auto 42px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* EACH CARD */
+
+.contact-links a {
+  min-height: 112px;
+
+  padding: 22px 26px;
+
+  display: grid;
+
+  grid-template-columns:
+    42px 1fr 25px;
+
+  align-items: center;
+
+  gap: 16px;
+
+  color: #eeeeef;
+
+  border-right: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease;
+}
+
+.contact-links a:last-child {
+  border-right: none;
+}
+
+.contact-links a:hover {
+  padding-left: 31px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.06),
+      transparent
+    );
+}
+
+
+/* NUMBER */
+
+.contact-link-number {
+  align-self: start;
+
+  padding-top: 3px;
+
+  color: #8b5cf6;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+
+/* TITLE + DETAILS */
+
+.contact-links a > span:nth-child(2) {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* EMAIL / GITHUB / LINKEDIN DETAILS */
+
+.contact-links small {
+  display: block;
+
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.01em;
+
+  word-break: break-word;
+}
+
+
+/* ARROW */
+
+.contact-link-arrow {
+  color: #777780;
+
+  font-size: 18px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-links a:hover
+.contact-link-arrow {
+  color: #c084fc;
+
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.contact-footer {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 22px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* BRAND */
+
+.contact-footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.contact-footer-mark {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid
+    rgba(168, 85, 247, 0.5);
+
+  border-radius: 50%;
+
+  color: #d8b4fe;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 12px;
+}
+
+.contact-footer-brand div:last-child {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-footer-brand strong {
+  color: #eeeeef;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 0.08em;
+}
+
+.contact-footer-brand small {
+  margin-top: 3px;
+
+  color: #55555e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* STATUS */
+
+.contact-footer-status {
+  justify-self: center;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+}
+
+.contact-footer-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 12px #8b5cf6;
+
+  animation:
+    contactPulse 2s infinite;
+}
+
+@keyframes contactPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+
+/* YEAR */
+
+.contact-footer-year {
+  justify-self: end;
+
+  color: #55555e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.contact-bottom {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding-top: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #45454d;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    padding:
+      120px 28px 30px;
+  }
+
+  .contact-content h2 {
+    font-size:
+      clamp(4.5rem, 13vw, 7rem);
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links a {
+    min-height: 95px;
+
+    border-right: none;
+
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+  .contact-links a:last-child {
+    border-bottom: none;
+  }
+
+  .contact-footer {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .contact-footer-status {
+    justify-self: end;
+  }
+
+  .contact-footer-year {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    min-height: 100svh;
+
+    padding:
+      100px 20px 24px;
+  }
+
+  .contact-glow {
+    width: 350px;
+    height: 350px;
+  }
+
+  .contact-orbit-1 {
+    width: 400px;
+  }
+
+  .contact-orbit-2 {
+    width: 580px;
+  }
+
+  .contact-orbit-3 {
+    width: 720px;
+  }
+
+  .contact-planet {
+    width: 100px;
+    height: 100px;
+
+    top: 35%;
+
+    opacity: 0.2;
+  }
+
+  .contact-content h2 {
+    margin-top: 20px;
+
+    font-size:
+      clamp(3.8rem, 17vw, 5.3rem);
+
+    line-height: 0.82;
+  }
+
+  .contact-description {
+    max-width: 400px;
+
+    margin-top: 27px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .contact-button {
+    margin-top: 27px;
+
+    padding:
+      14px 16px 14px 20px;
+
+    font-size: 8px;
+  }
+
+  .contact-links {
+    margin-bottom: 30px;
+  }
+
+  .contact-links a {
+    min-height: 88px;
+
+    padding:
+      17px 8px;
+  }
+
+  .contact-links a:hover {
+    padding-left: 13px;
+  }
+
+  .contact-links small {
+    font-size: 10px;
+  }
+
+  .contact-footer {
+    padding: 18px 0;
+  }
+
+  .contact-footer-status {
+    font-size: 7px;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    font-size: 6px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .contact-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact-links a {
+    grid-template-columns:
+      32px 1fr 22px;
+
+    gap: 10px;
+  }
+
+  .contact-links a > span:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .contact-links small {
+    font-size: 9px;
+  }
+
+  .contact-planet {
+    width: 85px;
+    height: 85px;
+  }
+}
