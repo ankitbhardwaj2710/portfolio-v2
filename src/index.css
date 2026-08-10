@@ -2947,3 +2947,538 @@ body::before {
     gap: 12px;
   }
 }
+
+/* ========================================
+   ABOUT — COSMIC IDENTITY
+======================================== */
+
+.about-section {
+  position: relative;
+  z-index: 4;
+
+  min-height: 100vh;
+
+  padding: 150px 5vw 100px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(124, 58, 237, 0.1),
+      transparent 38%
+    ),
+    #030305;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.about-heading {
+  max-width: 1180px;
+  margin: 0 auto 65px;
+}
+
+.about-kicker {
+  color: #a855f7;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+}
+
+.about-heading h2 {
+  margin-top: 22px;
+
+  color: #f5f5f7;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+  font-weight: 600;
+}
+
+.about-heading h2 span {
+  color: #707079;
+}
+
+.about-heading p {
+  max-width: 600px;
+
+  margin-top: 30px;
+
+  color: #85858d;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   UNIVERSE
+======================================== */
+
+.about-universe {
+  position: relative;
+
+  max-width: 1180px;
+  min-height: 560px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 360px 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+/* ========================================
+   CORE PLANET
+======================================== */
+
+.about-core {
+  position: relative;
+
+  width: 360px;
+  height: 360px;
+
+  margin: auto;
+
+  display: grid;
+  place-items: center;
+}
+
+.about-planet {
+  position: relative;
+
+  width: 170px;
+  height: 170px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 22%,
+      #ffffff 0%,
+      #c084fc 11%,
+      #4c1d95 38%,
+      #090312 72%,
+      #030305 100%
+    );
+
+  box-shadow:
+    inset -35px -30px 55px
+      rgba(0, 0, 0, 0.85),
+
+    inset 15px 12px 25px
+      rgba(255, 255, 255, 0.14),
+
+    0 0 70px
+      rgba(139, 92, 246, 0.3);
+}
+
+.about-planet span {
+  color: #ffffff;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 28px;
+
+  text-shadow:
+    0 0 20px
+    rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================
+   ORBITS
+======================================== */
+
+.about-orbit {
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid
+    rgba(168, 85, 247, 0.22);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.orbit-1 {
+  transform:
+    rotate(25deg)
+    scaleY(0.32);
+
+  animation:
+    aboutOrbitOne 14s linear infinite;
+}
+
+.orbit-2 {
+  transform:
+    rotate(-35deg)
+    scaleY(0.48);
+
+  animation:
+    aboutOrbitTwo 18s linear infinite;
+}
+
+.orbit-3 {
+  transform:
+    rotate(70deg)
+    scaleY(0.68);
+
+  opacity: 0.5;
+
+  animation:
+    aboutOrbitThree 22s linear infinite;
+}
+
+@keyframes aboutOrbitOne {
+  to {
+    transform:
+      rotate(385deg)
+      scaleY(0.32);
+  }
+}
+
+@keyframes aboutOrbitTwo {
+  to {
+    transform:
+      rotate(-395deg)
+      scaleY(0.48);
+  }
+}
+
+@keyframes aboutOrbitThree {
+  to {
+    transform:
+      rotate(430deg)
+      scaleY(0.68);
+  }
+}
+
+/* ========================================
+   CORE LABEL
+======================================== */
+
+.about-core-label {
+  position: absolute;
+
+  bottom: -15px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  color: #eeeeef;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+}
+
+.about-core-label small {
+  margin-top: 5px;
+
+  color: #55555e;
+
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+}
+
+/* ========================================
+   COPY
+======================================== */
+
+.about-copy {
+  max-width: 320px;
+}
+
+.about-copy-left {
+  justify-self: start;
+}
+
+.about-copy-right {
+  justify-self: end;
+}
+
+.about-small-label {
+  color: #a855f7;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.13em;
+}
+
+.about-copy h3 {
+  margin-top: 17px;
+
+  color: #eeeeef;
+
+  font-size: 38px;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.about-copy h3 em {
+  color: #a855f7;
+
+  font-style: normal;
+}
+
+.about-copy p {
+  margin-top: 20px;
+
+  color: #777780;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* ========================================
+   EXPLORATION
+======================================== */
+
+.about-exploration {
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.about-exploration div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.about-exploration strong {
+  color: #eeeeef;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.about-exploration span {
+  margin-top: 4px;
+
+  color: #5f5f68;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+/* ========================================
+   STATS
+======================================== */
+
+.about-stats {
+  max-width: 1180px;
+
+  margin: 20px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.about-stat {
+  min-height: 120px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-right: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.about-stat:last-child {
+  border-right: none;
+}
+
+.about-stat strong {
+  color: #eeeeef;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.about-stat span {
+  margin-top: 10px;
+
+  color: #5c5c65;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+/* ========================================
+   END
+======================================== */
+
+.about-end {
+  margin-top: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #494950;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+.about-end span {
+  width: 70px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #6d28d9
+    );
+}
+
+.about-end span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      #6d28d9,
+      transparent
+    );
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding:
+      110px 24px 70px;
+  }
+
+  .about-universe {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-copy-left,
+  .about-copy-right {
+    justify-self: center;
+
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .about-core {
+    order: -1;
+  }
+
+  .about-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .about-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-stat:nth-child(-n + 2) {
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 520px) {
+  .about-heading h2 {
+    font-size: 4rem;
+  }
+
+  .about-heading p {
+    font-size: 13px;
+  }
+
+  .about-core {
+    width: 280px;
+    height: 280px;
+  }
+
+  .about-planet {
+    width: 135px;
+    height: 135px;
+  }
+
+  .about-copy h3 {
+    font-size: 31px;
+  }
+
+  .about-stat {
+    min-height: 100px;
+    padding: 18px;
+  }
+
+  .about-stat strong {
+    font-size: 25px;
+  }
+}

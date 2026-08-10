@@ -8,6 +8,8 @@ import Hero from "./sections/Hero";
 import FlatFlow from "./sections/FlatFlow";
 import Journey from "./sections/Journey";
 import Projects from "./sections/Projects";
+import About from "./sections/About";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +53,7 @@ function App() {
           <Journey />
           <Projects />
           <FlatFlow />
+          <About />
           {/* <section className="future-section" id="projects">
             <span>02</span>
             <h2>Projects from another orbit.</h2>
