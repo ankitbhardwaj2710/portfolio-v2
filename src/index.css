@@ -1111,3 +1111,1248 @@ body::before {
     display: none;
   }
 }
+/* ========================================
+   FLATFLOW FEATURED PROJECT
+======================================== */
+
+.flatflow-section {
+  position: relative;
+
+  min-height: 120vh;
+
+  z-index: 3;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 7vw;
+
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(124, 58, 237, 0.08),
+      transparent 32%
+    ),
+    #030305;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.flatflow-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(139, 92, 246, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    radial-gradient(
+      circle at 70% 50%,
+      black,
+      transparent 65%
+    );
+
+  pointer-events: none;
+}
+
+/* PROJECT CONTENT */
+
+.flatflow-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: min(620px, 55vw);
+}
+
+.flatflow-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #777780;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+.flatflow-label span {
+  color: #c084fc;
+}
+
+.flatflow-label i {
+  width: 25px;
+  height: 1px;
+
+  background: #8b5cf6;
+}
+
+.flatflow-eyebrow {
+  margin-top: 55px;
+
+  color: #66666e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.13em;
+}
+
+.flatflow-content h2 {
+  margin-top: 13px;
+
+  font-size: clamp(5rem, 11vw, 11rem);
+
+  line-height: 0.75;
+
+  letter-spacing: -0.09em;
+
+  font-weight: 600;
+}
+
+.flatflow-content h2 span {
+  display: block;
+
+  color: #c084fc;
+}
+
+.flatflow-description {
+  max-width: 470px;
+
+  margin-top: 38px;
+
+  color: #85858d;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.flatflow-tech {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.flatflow-tech span {
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 999px;
+
+  color: #8f8f97;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.08em;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.flatflow-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.flatflow-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  border-radius: 999px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.flatflow-button.primary {
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a855f7,
+      #6d28d9
+    );
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.flatflow-button.primary:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 45px rgba(139, 92, 246, 0.35);
+}
+
+.flatflow-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #b0b0b7;
+}
+
+.flatflow-button.secondary:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(192, 132, 252, 0.45);
+
+  background: rgba(139, 92, 246, 0.06);
+}
+
+/* PLANET */
+
+.flatflow-planet {
+  position: absolute;
+
+  right: 5vw;
+  top: 50%;
+
+  z-index: 5;
+
+  width: min(520px, 42vw);
+  aspect-ratio: 1;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+}
+
+.flatflow-planet-glow {
+  position: absolute;
+
+  inset: -30%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.18),
+      rgba(124, 58, 237, 0.06) 40%,
+      transparent 70%
+    );
+
+  filter: blur(25px);
+}
+
+.flatflow-core {
+  position: absolute;
+
+  inset: 17%;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      #d8b4fe 0%,
+      #8b5cf6 18%,
+      #4c1d95 48%,
+      #10051e 78%,
+      #030305 100%
+    );
+
+  box-shadow:
+    inset -45px -30px 80px rgba(0, 0, 0, 0.75),
+    inset 20px 20px 40px rgba(255, 255, 255, 0.12),
+    0 0 70px rgba(139, 92, 246, 0.25);
+
+  overflow: hidden;
+}
+
+.flatflow-core::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      165deg,
+      transparent 0px,
+      transparent 18px,
+      rgba(216, 180, 254, 0.035) 20px,
+      transparent 23px
+    );
+
+  opacity: 0.8;
+}
+
+.flatflow-core span {
+  position: relative;
+
+  z-index: 2;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: clamp(2rem, 5vw, 4rem);
+
+  font-weight: 600;
+
+  letter-spacing: -0.08em;
+}
+
+/* ORBITS */
+
+.flatflow-orbit {
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid rgba(192, 132, 252, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.flatflow-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  top: 5%;
+  left: 50%;
+
+  border-radius: 50%;
+
+  background: #c084fc;
+
+  box-shadow:
+    0 0 12px #a855f7,
+    0 0 25px rgba(168, 85, 247, 0.6);
+}
+
+.orbit-a {
+  transform: rotate(25deg) scaleY(0.36);
+
+  animation:
+    flatOrbitOne 18s linear infinite;
+}
+
+.orbit-b {
+  transform: rotate(-35deg) scaleY(0.55);
+
+  animation:
+    flatOrbitTwo 25s linear infinite;
+}
+
+@keyframes flatOrbitOne {
+  from {
+    transform: rotate(25deg) scaleY(0.36);
+  }
+
+  to {
+    transform: rotate(385deg) scaleY(0.36);
+  }
+}
+
+@keyframes flatOrbitTwo {
+  from {
+    transform: rotate(-35deg) scaleY(0.55);
+  }
+
+  to {
+    transform: rotate(-395deg) scaleY(0.55);
+  }
+}
+
+/* META */
+
+.flatflow-meta {
+  position: absolute;
+
+  right: 7vw;
+  bottom: 45px;
+
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  width: min(520px, 42vw);
+
+  color: #44444b;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .flatflow-section {
+    min-height: 100svh;
+
+    padding: 100px 24px;
+
+    align-items: flex-end;
+  }
+
+  .flatflow-content {
+    width: 100%;
+  }
+
+  .flatflow-eyebrow {
+    margin-top: 35px;
+  }
+
+  .flatflow-description {
+    font-size: 14px;
+  }
+
+  .flatflow-planet {
+    width: 330px;
+
+    right: -100px;
+    top: 25%;
+
+    opacity: 0.7;
+  }
+
+  .flatflow-content h2 {
+    font-size: clamp(4rem, 19vw, 7rem);
+  }
+
+  .flatflow-actions {
+    flex-wrap: wrap;
+  }
+
+  .flatflow-meta {
+    right: 24px;
+    bottom: 25px;
+
+    width: calc(100% - 48px);
+  }
+}
+/* ========================================
+   WAVY COSMIC JOURNEY
+======================================== */
+
+.journey-section {
+  position: relative;
+  z-index: 4;
+  min-height: 100vh;
+  padding: 145px 5vw 85px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 55%,
+      rgba(124, 58, 237, 0.075),
+      transparent 48%
+    ),
+    #030305;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   JOURNEY HEADING
+======================================== */
+
+.journey-heading {
+  position: relative;
+  z-index: 10;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.journey-section-number {
+  color: #a855f7;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
+.journey-heading h2 {
+  margin-top: 22px;
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  font-weight: 600;
+}
+
+.journey-heading h2 span {
+  color: #777780;
+}
+
+.journey-heading p {
+  max-width: 560px;
+  margin: 30px auto 0;
+  color: #808089;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   WAVE UNIVERSE
+======================================== */
+
+.journey-universe {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 555px;
+  margin: 18px auto 0;
+  will-change: transform;
+}
+
+.journey-wave {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 100%;
+  height: 470px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.journey-wave-path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 0;
+}
+
+.journey-wave-glow {
+  filter: blur(9px);
+}
+
+/* ========================================
+   STARS
+======================================== */
+
+.journey-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: rgba(216, 180, 254, 0.65);
+  font-size: 14px;
+}
+
+.journey-stars span {
+  position: absolute;
+  animation: journeyTwinkle 3.5s ease-in-out infinite;
+}
+
+.journey-stars span:nth-child(1) {
+  left: 7%;
+  top: 42%;
+}
+
+.journey-stars span:nth-child(2) {
+  left: 24%;
+  top: 10%;
+  animation-delay: 0.7s;
+}
+
+.journey-stars span:nth-child(3) {
+  left: 44%;
+  top: 75%;
+  animation-delay: 1.4s;
+}
+
+.journey-stars span:nth-child(4) {
+  left: 65%;
+  top: 13%;
+  animation-delay: 0.3s;
+}
+
+.journey-stars span:nth-child(5) {
+  left: 82%;
+  top: 67%;
+  animation-delay: 1.7s;
+}
+
+.journey-stars span:nth-child(6) {
+  left: 94%;
+  top: 30%;
+  animation-delay: 2s;
+}
+
+@keyframes journeyTwinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+/* ========================================
+   JOURNEY CARDS / ORBITS
+======================================== */
+
+.journey-card {
+  position: absolute;
+  z-index: 8;
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  will-change: transform;
+}
+
+.journey-card-1 {
+  left: 0%;
+  top: 190px;
+}
+
+.journey-card-2 {
+  left: 25%;
+  top: 55px;
+}
+
+.journey-card-3 {
+  left: 50%;
+  top: 220px;
+}
+
+.journey-card-4 {
+  right: 0%;
+  top: 70px;
+}
+
+/* ========================================
+   PLANETS
+======================================== */
+
+.journey-planet {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  flex-shrink: 0;
+}
+
+.journey-planet-halo {
+  position: absolute;
+  inset: -50px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--planet-color) 24%, transparent),
+      transparent 68%
+    );
+  filter: blur(24px);
+  animation: journeyHalo 4s ease-in-out infinite;
+}
+
+@keyframes journeyHalo {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.journey-planet-surface {
+  position: absolute;
+  inset: 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 23%,
+      #ffffff 0%,
+      var(--planet-color) 14%,
+      color-mix(in srgb, var(--planet-color) 55%, #08030f) 50%,
+      #030305 100%
+    );
+  box-shadow:
+    inset -28px -24px 42px rgba(0, 0, 0, 0.82),
+    inset 12px 10px 22px rgba(255, 255, 255, 0.13),
+    0 0 42px color-mix(in srgb, var(--planet-color) 28%, transparent);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.journey-card:hover .journey-planet-surface {
+  transform: scale(1.09);
+  box-shadow:
+    inset -28px -24px 42px rgba(0, 0, 0, 0.82),
+    0 0 70px color-mix(in srgb, var(--planet-color) 46%, transparent);
+}
+
+.journey-planet-surface span {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.96);
+  font-family: "DM Mono", monospace;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ========================================
+   PLANET RINGS
+======================================== */
+
+.journey-planet-ring {
+  position: absolute;
+  inset: -4px;
+  border: 1px solid color-mix(in srgb, var(--planet-color) 42%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.journey-planet-ring::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--planet-color);
+  box-shadow:
+    0 0 10px var(--planet-color),
+    0 0 20px var(--planet-color);
+}
+
+.ring-one {
+  transform: rotate(25deg) scaleY(0.34);
+  animation: journeyRingOne 12s linear infinite;
+}
+
+.ring-two {
+  transform: rotate(-35deg) scaleY(0.53);
+  animation: journeyRingTwo 17s linear infinite;
+}
+
+@keyframes journeyRingOne {
+  to {
+    transform: rotate(385deg) scaleY(0.34);
+  }
+}
+
+@keyframes journeyRingTwo {
+  to {
+    transform: rotate(-395deg) scaleY(0.53);
+  }
+}
+
+/* ========================================
+   JOURNEY CONTENT
+======================================== */
+
+.journey-info {
+  width: 340px;
+  margin-top: 22px;
+}
+
+.journey-label {
+  display: block;
+  color: var(--planet-color);
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+.journey-info h3 {
+  margin-top: 11px;
+  color: #f4f4f5;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.06);
+}
+
+.journey-info p {
+  margin-top: 14px;
+  color: #85858e;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.journey-meta {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.journey-meta span {
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  color: #85858d;
+  background: rgba(255, 255, 255, 0.025);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.04em;
+}
+
+/* ========================================
+   ACHIEVEMENTS / CERTIFICATIONS
+======================================== */
+
+.journey-certificates {
+  position: relative;
+  z-index: 10;
+  max-width: 1180px;
+  margin: 10px auto 0;
+}
+
+.journey-achievements-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 22px;
+}
+
+.journey-achievements-heading > span {
+  color: #a855f7;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+}
+
+.journey-achievements-heading h3 {
+  margin-left: auto;
+  color: #eeeeef;
+  font-size: 30px;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
+
+.journey-achievements-heading h3 em {
+  color: #777780;
+  font-style: normal;
+}
+
+.journey-achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.journey-certificate {
+  position: relative;
+  min-height: 112px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.008)
+    );
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.journey-certificate:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.35);
+  background: rgba(139, 92, 246, 0.055);
+}
+
+.journey-certificate.featured {
+  border-color: rgba(168, 85, 247, 0.18);
+}
+
+.certificate-number {
+  flex-shrink: 0;
+  color: #a855f7;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.certificate-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-content span {
+  color: #696971;
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+.certificate-content strong {
+  margin-top: 8px;
+  color: #eeeeef;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.certificate-content em {
+  margin-top: 7px;
+  color: #777780;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.achievement-glow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  right: -70px;
+  bottom: -80px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.14);
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+/* ========================================
+   END
+======================================== */
+
+.journey-end {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 35px;
+  color: #494950;
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.journey-end i {
+  width: 55px;
+  height: 1px;
+  background: #5b21b6;
+}
+
+.journey-end strong {
+  color: #c084fc;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* ========================================
+   JOURNEY MOBILE
+======================================== */
+
+@media (max-width: 1100px) {
+  .journey-card {
+    width: 270px;
+  }
+
+  .journey-info {
+    width: 290px;
+  }
+
+  .journey-info h3 {
+    font-size: 22px;
+  }
+
+  .journey-info p {
+    font-size: 12px;
+  }
+
+  .journey-achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .journey-section {
+    min-height: auto;
+    padding: 110px 24px 70px;
+  }
+
+  .journey-heading {
+    text-align: left;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+  }
+
+  .journey-heading p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .journey-universe {
+    height: auto;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+  }
+
+  .journey-wave,
+  .journey-stars {
+    display: none;
+  }
+
+  .journey-card,
+  .journey-card-1,
+  .journey-card-2,
+  .journey-card-3,
+  .journey-card-4 {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .journey-planet {
+    width: 100px;
+    height: 100px;
+  }
+
+  .journey-info {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .journey-info h3 {
+    font-size: 19px;
+  }
+
+  .journey-info p {
+    max-width: 340px;
+    font-size: 13px;
+  }
+
+  .journey-meta {
+    justify-content: flex-start;
+  }
+
+  .journey-achievements-heading {
+    display: block;
+  }
+
+  .journey-achievements-heading h3 {
+    margin: 12px 0 0;
+    font-size: 27px;
+  }
+
+  .journey-achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-certificate {
+    min-height: 105px;
+  }
+
+  .journey-end {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 520px) {
+  .journey-card,
+  .journey-card-1,
+  .journey-card-2,
+  .journey-card-3,
+  .journey-card-4 {
+    align-items: flex-start;
+  }
+
+  .journey-planet {
+    width: 82px;
+    height: 82px;
+  }
+
+  .journey-planet-surface {
+    inset: 9px;
+  }
+
+  .journey-planet-surface span {
+    font-size: 12px;
+  }
+
+  .journey-info h3 {
+    font-size: 17px;
+  }
+
+  .journey-info p {
+    font-size: 12px;
+  }
+
+  .journey-meta span {
+    font-size: 7px;
+  }
+}
+/* ========================================
+   NAVBAR MOBILE FIX
+======================================== */
+
+.navbar-menu-button {
+  display: none;
+}
+
+.navbar-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .navbar-mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(3, 3, 5, 0.96);
+    backdrop-filter: blur(25px);
+  }
+
+  .navbar-mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar-mobile-links a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+
+  .navbar-mobile-links a span {
+    color: #8b5cf6;
+    font-size: 11px;
+  }
+
+  .navbar-mobile-status {
+    position: absolute;
+    bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #777780;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar-mobile-status span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: #8b5cf6;
+
+    box-shadow: 0 0 12px #8b5cf6;
+  }
+}

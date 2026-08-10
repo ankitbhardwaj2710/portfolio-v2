@@ -5,6 +5,8 @@ import CosmicBackground from "./components/CosmicBackground";
 import CursorSpark from "./components/CursorSpark";
 import Loader from "./components/Loader";
 import Hero from "./sections/Hero";
+import FlatFlow from "./sections/FlatFlow";
+import Journey from "./sections/Journey";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -45,11 +47,12 @@ function App() {
         <Navbar />
         <main>
           <Hero />
-
-          <section className="future-section" id="projects">
+          <Journey />
+          <FlatFlow />
+          {/* <section className="future-section" id="projects">
             <span>02</span>
             <h2>Projects from another orbit.</h2>
-          </section>
+          </section> */}
 
           <section className="future-section" id="about">
             <span>03</span>

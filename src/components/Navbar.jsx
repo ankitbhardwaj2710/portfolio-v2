@@ -1,105 +1,170 @@
 import { useEffect, useState } from "react";
 
-const links = [
-  { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Journey", href: "#journey" },
+  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
+      setScrolled(window.scrollY > 40);
 
-      const sections = links
-        .map((link) => document.querySelector(link.href))
+      const sections = navLinks
+        .map((link) => link.href.replace("#", ""))
+        .map((id) => document.getElementById(id))
         .filter(Boolean);
 
-      let current = "home";
+      let current = "Home";
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
 
         if (rect.top <= window.innerHeight * 0.35) {
-          current = section.id;
+          current =
+            navLinks.find(
+              (link) =>
+                link.href === `#${section.id}`
+            )?.name || current;
         }
       });
 
       setActive(current);
     };
 
+    window.addEventListener("scroll", handleScroll);
+
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
   }, []);
 
-  const handleClick = (event, href) => {
-    event.preventDefault();
+  useEffect(() => {
+    document.body.style.overflow = menuOpen
+      ? "hidden"
+      : "";
 
-    const target = document.querySelector(href);
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
-    if (!target) return;
-
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-      <a
-        href="#home"
-        className="navbar-logo"
-        onClick={(event) => handleClick(event, "#home")}
+    <>
+      <header
+        className={`navbar ${
+          scrolled ? "navbar-scrolled" : ""
+        }`}
       >
-        <span className="navbar-logo-mark">A</span>
+        {/* LOGO */}
+        <a
+          href="#home"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
+          <div className="navbar-logo-mark">
+            A
+          </div>
 
-        <span className="navbar-logo-text">
-          ANKIT
-          <small>BHARDWAJ</small>
-        </span>
-      </a>
+          <div className="navbar-logo-text">
+            <span>ANKIT</span>
+            <small>BHARDWAJ</small>
+          </div>
+        </a>
 
-      <nav className="navbar-links">
-        {links.map((link, index) => {
-          const id = link.href.replace("#", "");
-          const isActive = active === id;
-
-          return (
+        {/* DESKTOP LINKS */}
+        <nav className="navbar-links">
+          {navLinks.map((link, index) => (
             <a
-              key={link.label}
+              key={link.name}
               href={link.href}
-              className={isActive ? "active" : ""}
-              onClick={(event) =>
-                handleClick(event, link.href)
+              className={
+                active === link.name
+                  ? "active"
+                  : ""
               }
+              onClick={closeMenu}
             >
               <span className="nav-number">
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(
+                  2,
+                  "0"
+                )}
               </span>
 
-              <span>{link.label}</span>
+              {link.name}
             </a>
-          );
-        })}
-      </nav>
+          ))}
+        </nav>
 
-      <div className="navbar-status">
-        <span />
-        <small>IND / 2026</small>
-      </div>
-    </header>
+        {/* STATUS */}
+        <div className="navbar-status">
+          <span />
+          IND / 2026
+        </div>
+
+        {/* MOBILE BUTTON */}
+        <button
+          className="navbar-menu-button"
+          onClick={() =>
+            setMenuOpen((prev) => !prev)
+          }
+          aria-label={
+            menuOpen
+              ? "Close menu"
+              : "Open menu"
+          }
+        >
+          {menuOpen ? "×" : "☰"}
+        </button>
+      </header>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="navbar-mobile-menu">
+          <div className="navbar-mobile-links">
+            {navLinks.map((link, index) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={closeMenu}
+              >
+                <span>
+                  {String(index + 1).padStart(
+                    2,
+                    "0"
+                  )}
+                </span>
+
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="navbar-mobile-status">
+            <span />
+            AVAILABLE FOR WORK
+          </div>
+        </div>
+      )}
+    </>
   );
 }
+
+export default Navbar;
