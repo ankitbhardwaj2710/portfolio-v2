@@ -50,7 +50,7 @@ function Contact() {
       <div className="contact-links">
 
         <a
-          href="mailto:ankitbhardwaj2710@gmail.com"
+          href="mailto:ankitbhardwaj94684@gmail.com"
         >
           <span className="contact-link-number">
             01
@@ -59,7 +59,7 @@ function Contact() {
           <span>
             Email
             <small>
-              ankitbhardwaj2710@gmail.com
+              ankitbhardwaj94684@gmail.com
             </small>
           </span>
 
