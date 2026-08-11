@@ -8223,3 +8223,254 @@ small {
     font-size: 9px;
   }
 }
+/* PROJECT CARD GITHUB ARROW */
+.project-card-bottom a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: #c084fc;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.project-card-bottom a:hover {
+  color: #ffffff;
+  transform: translate(3px, -3px);
+}
+
+.project-card-unavailable {
+  color: #44444c;
+  font-size: 14px;
+}
+.project-actions a span {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+.project-card-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-card-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: #c084fc;
+
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-card-links a:hover {
+  color: #ffffff;
+
+  background:
+    rgba(139, 92, 246, 0.12);
+
+  border-color:
+    rgba(168, 85, 247, 0.35);
+
+  transform:
+    translateY(-2px);
+}
+
+.project-download {
+  color: #d8b4fe !important;
+}
+
+.project-actions .project-download {
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow: none;
+}
+
+.project-actions .project-download:hover {
+  background:
+    rgba(139, 92, 246, 0.10);
+}
+/* =========================================================
+   PROJECT ACTION BUTTONS
+========================================================= */
+
+.project-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 32px;
+
+  padding: 8px 12px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-radius: 999px;
+
+  color: #a1a1aa;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.06em;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+
+  border-color:
+    rgba(168, 85, 247, 0.40);
+
+  background:
+    rgba(139, 92, 246, 0.10);
+}
+
+.project-button-arrow {
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1;
+}
+
+.github-button {
+  color: #c4b5fd;
+}
+
+.apk-button {
+  color: #d8b4fe;
+}
+
+.project-buttons-featured {
+  margin-top: 24px;
+
+  gap: 10px;
+}
+
+.project-buttons-featured
+.project-button {
+  min-height: 38px;
+
+  padding:
+    10px 15px;
+
+  font-size: 8px;
+}
+
+.project-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 16px;
+
+  color: #55555e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+.project-status i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 10px
+    rgba(139, 92, 246, 0.8);
+}
+
+
+/* =========================================================
+   PROJECT BUTTONS — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .project-buttons {
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 16px;
+  }
+
+  .project-button {
+    min-height: 34px;
+
+    padding:
+      8px 11px;
+
+    font-size: 7px;
+  }
+
+  .project-buttons-featured {
+    margin-top: 20px;
+  }
+
+  .project-buttons-featured
+  .project-button {
+    min-height: 36px;
+
+    padding:
+      9px 13px;
+
+    font-size: 7.5px;
+  }
+}
