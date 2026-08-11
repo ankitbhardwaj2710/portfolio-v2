@@ -232,15 +232,30 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <a href="#projects" className="hero-button primary">
-            <span>Explore my universe</span>
-            <span className="button-arrow">↗</span>
-          </a>
+  <a
+    href="#projects"
+    className="hero-button primary"
+  >
+    <span>Explore my universe</span>
+    <span className="button-arrow">↗</span>
+  </a>
 
-          <a href="#contact" className="hero-button secondary">
-            Let's talk
-          </a>
-        </div>
+  <a
+    href="#contact"
+    className="hero-button secondary"
+  >
+    Let's talk
+  </a>
+
+  <a
+    href="/resume.pdf"
+    className="hero-button secondary"
+    download="Ankit-Bhardwaj-Resume.pdf"
+  >
+    <span>Download Resume</span>
+    <span className="button-arrow">↓</span>
+  </a>
+</div>
       </div>
 
       <div ref={projectRef} className="hero-project">
