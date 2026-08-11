@@ -53,7 +53,7 @@ function App() {
           <Hero />
           <Journey />
           <Projects />
-          <FlatFlow />
+          {/* <FlatFlow /> */}
           <About />
           <Skills />
           <Contact />

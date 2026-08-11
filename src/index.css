@@ -826,9 +826,9 @@ body::before {
     display: none;
   }
 }
-/* ========================================
+/* =========================================================
    NAVBAR
-======================================== */
+========================================================= */
 
 .navbar {
   position: fixed;
@@ -837,63 +837,79 @@ body::before {
   left: 0;
   right: 0;
 
-  z-index: 100;
+  z-index: 1000;
+
+  height: 82px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 32px 7vw;
-
-  transition:
-    padding 0.45s ease,
-    background 0.45s ease,
-    backdrop-filter 0.45s ease,
-    border-color 0.45s ease;
+  padding: 0 5vw;
 
   border-bottom: 1px solid transparent;
+
+  transition:
+    height 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease,
+    backdrop-filter 0.4s ease;
 }
 
 .navbar-scrolled {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 68px;
 
-  background: rgba(3, 3, 5, 0.68);
+  background:
+    rgba(3, 3, 5, 0.72);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
 
-  border-bottom-color: rgba(255, 255, 255, 0.08);
+  border-bottom-color:
+    rgba(255, 255, 255, 0.07);
 }
 
-/* ========================================
+
+/* =========================================================
    LOGO
-======================================== */
+========================================================= */
 
 .navbar-logo {
   display: flex;
+
   align-items: center;
-  gap: 14px;
+
+  gap: 11px;
+
+  color: #f5f5f7;
+
+  text-decoration: none;
 }
 
 .navbar-logo-mark {
-  width: 44px;
-  height: 44px;
+  width: 31px;
+  height: 31px;
 
   display: grid;
+
   place-items: center;
 
-  border: 1px solid rgba(192, 132, 252, 0.55);
+  border: 1px solid
+    rgba(192, 132, 252, 0.5);
+
   border-radius: 50%;
 
   color: #d8b4fe;
 
   font-family: "DM Mono", monospace;
-  font-size: 15px;
-  font-weight: 500;
+
+  font-size: 11px;
 
   box-shadow:
-    0 0 18px rgba(139, 92, 246, 0.18),
-    inset 0 0 14px rgba(139, 92, 246, 0.08);
+    0 0 16px
+    rgba(139, 92, 246, 0.16),
+
+    inset 0 0 12px
+    rgba(139, 92, 246, 0.08);
 
   transition:
     transform 0.4s ease,
@@ -901,27 +917,29 @@ body::before {
     box-shadow 0.4s ease;
 }
 
-.navbar-logo:hover .navbar-logo-mark {
+.navbar-logo:hover
+.navbar-logo-mark {
   transform: rotate(180deg);
 
   border-color: #c084fc;
 
   box-shadow:
-    0 0 25px rgba(168, 85, 247, 0.35),
-    inset 0 0 18px rgba(139, 92, 246, 0.12);
+    0 0 22px
+    rgba(168, 85, 247, 0.25);
 }
 
 .navbar-logo-text {
   display: flex;
+
   flex-direction: column;
 
   color: #f5f5f7;
 
   font-family: "DM Mono", monospace;
-  font-size: 14px;
-  font-weight: 500;
 
-  line-height: 1.15;
+  font-size: 11px;
+
+  line-height: 1.1;
 
   letter-spacing: 0.08em;
 }
@@ -929,40 +947,54 @@ body::before {
 .navbar-logo-text small {
   margin-top: 3px;
 
-  color: #777780;
+  color: #686870;
 
-  font-size: 9px;
+  font-size: 7px;
 
   letter-spacing: 0.16em;
 }
 
-/* ========================================
-   LINKS
-======================================== */
+
+/* =========================================================
+   DESKTOP LINKS
+========================================================= */
 
 .navbar-links {
   display: flex;
+
   align-items: center;
 
-  gap: 38px;
+  gap: 30px;
+
+  margin-left: auto;
+
+  margin-right: 40px;
 }
 
 .navbar-links a {
   position: relative;
 
   display: flex;
+
   align-items: center;
 
-  gap: 8px;
+  gap: 7px;
+
+  padding: 8px 0;
 
   color: #777780;
 
   font-family: "DM Mono", monospace;
-  font-size: 12px;
+
+  font-size: 10px;
+
   font-weight: 400;
 
+  text-decoration: none;
+
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+
+  letter-spacing: 0.08em;
 
   transition:
     color 0.3s ease,
@@ -972,24 +1004,16 @@ body::before {
 .navbar-links a:hover {
   color: #ffffff;
 
-  transform: translateY(-1px);
+  transform:
+    translateY(-1px);
 }
 
 .navbar-links a.active {
   color: #d8b4fe;
 }
 
-.nav-number {
-  color: #484850;
 
-  font-size: 8px;
-
-  transition: color 0.3s ease;
-}
-
-.navbar-links a.active .nav-number {
-  color: #8b5cf6;
-}
+/* ACTIVE DOT */
 
 .navbar-links a.active::after {
   content: "";
@@ -997,42 +1021,253 @@ body::before {
   position: absolute;
 
   left: 50%;
-  bottom: -13px;
 
-  width: 5px;
-  height: 5px;
+  bottom: -5px;
 
-  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
 
   border-radius: 50%;
 
   background: #a855f7;
 
   box-shadow:
-    0 0 8px #a855f7,
-    0 0 18px rgba(168, 85, 247, 0.5);
+    0 0 9px #a855f7;
 }
 
-/* ========================================
+
+/* NUMBER */
+
+.nav-number {
+  color: #414149;
+
+  font-size: 7px;
+
+  transition:
+    color 0.3s ease;
+}
+
+.navbar-links a.active
+.nav-number {
+  color: #8b5cf6;
+}
+
+
+/* =========================================================
    STATUS
-======================================== */
+========================================================= */
 
 .navbar-status {
   display: flex;
+
   align-items: center;
 
-  gap: 9px;
+  gap: 8px;
 
-  color: #66666e;
+  color: #686870;
 
   font-family: "DM Mono", monospace;
-  font-size: 10px;
-  font-weight: 400;
+
+  font-size: 8px;
+
+  letter-spacing: 0.09em;
+
+  white-space: nowrap;
+}
+
+.navbar-status span {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 9px #8b5cf6;
+
+  animation:
+    navbarPulse
+    2s ease-in-out
+    infinite;
+}
+
+@keyframes navbarPulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.navbar-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: #eeeeef;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-menu-button:hover {
+  background:
+    rgba(139, 92, 246, 0.10);
+
+  border-color:
+    rgba(168, 85, 247, 0.35);
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.navbar-mobile-menu {
+  position: fixed;
+
+  z-index: 999;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding:
+    105px 28px 35px;
+
+  display: none;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background:
+    radial-gradient(
+      ellipse at 70% 20%,
+      rgba(124, 58, 237, 0.10),
+      transparent 40%
+    ),
+    rgba(3, 3, 5, 0.97);
+
+  backdrop-filter: blur(22px);
+
+  overflow-y: auto;
+}
+
+.navbar-mobile-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.navbar-mobile-links a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding:
+    18px 0;
+
+  color: #eeeeef;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 20px;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.navbar-mobile-links a:hover {
+  padding-left: 7px;
+
+  color: #c084fc;
+}
+
+.navbar-mobile-links a span {
+  min-width: 24px;
+
+  color: #8b5cf6;
+
+  font-size: 8px;
 
   letter-spacing: 0.08em;
 }
 
-.navbar-status span {
+.navbar-mobile-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #686870;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.10em;
+}
+
+.navbar-mobile-status span {
   width: 6px;
   height: 6px;
 
@@ -1041,77 +1276,108 @@ body::before {
   background: #8b5cf6;
 
   box-shadow:
-    0 0 8px #8b5cf6,
-    0 0 16px rgba(139, 92, 246, 0.4);
-
-  animation: pulse 2s infinite;
+    0 0 10px #8b5cf6;
 }
 
-/* ========================================
-   NAVBAR MOBILE
-======================================== */
 
-@media (max-width: 800px) {
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
   .navbar {
-    padding: 20px 24px;
-  }
-
-  .navbar-scrolled {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding:
+      0 28px;
   }
 
   .navbar-links {
-    gap: 14px;
+    gap: 21px;
+
+    margin-right: 25px;
   }
 
   .navbar-links a {
-    font-size: 8px;
-  }
-
-  .nav-number {
-    display: none;
+    font-size: 9px;
   }
 
   .navbar-status {
     display: none;
   }
+}
 
-  .navbar-logo {
-    gap: 9px;
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    height: 70px;
+
+    padding:
+      0 22px;
+  }
+
+  .navbar-scrolled {
+    height: 62px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu-button {
+    display: flex;
+  }
+
+  .navbar-mobile-menu {
+    display: flex;
+  }
+
+  .navbar-logo-mark {
+    width: 29px;
+    height: 29px;
   }
 
   .navbar-logo-text {
     font-size: 10px;
   }
-
-  .navbar-logo-text small {
-    font-size: 7px;
-  }
-
-  .navbar-logo-mark {
-    width: 30px;
-    height: 30px;
-
-    font-size: 11px;
-  }
 }
 
-@media (max-width: 520px) {
-  .navbar-links {
-    gap: 10px;
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding:
+      0 17px;
   }
 
-  .navbar-links a {
-    font-size: 7px;
+  .navbar-menu-button {
+    width: 38px;
+    height: 38px;
+
+    font-size: 20px;
   }
 
-  .navbar-links a:nth-child(4),
-  .navbar-links a:nth-child(5) {
-    display: none;
+  .navbar-mobile-menu {
+    padding:
+      92px 20px 28px;
+  }
+
+  .navbar-mobile-links a {
+    font-size: 18px;
+
+    padding:
+      16px 0;
   }
 }
-/* ========================================
+ /* ========================================
    FLATFLOW FEATURED PROJECT
 ======================================== */
 
@@ -1582,7 +1848,7 @@ body::before {
 
     width: calc(100% - 48px);
   }
-}
+} */
 /* =========================================================
    WAVY COSMIC JOURNEY
 ========================================================= */
