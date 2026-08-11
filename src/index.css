@@ -8474,3 +8474,574 @@ small {
     font-size: 7.5px;
   }
 }
+/* =========================================================
+   PROJECTS — PREMIUM HOVER POLISH
+========================================================= */
+
+.project-card {
+  isolation: isolate;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      color-mix(
+        in srgb,
+        var(--project-color) 13%,
+        transparent
+      ),
+      transparent 48%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+.project-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--project-color) 45%,
+      transparent
+    );
+
+  box-shadow:
+    0 20px 55px
+    rgba(0, 0, 0, 0.35);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   PLANET HOVER
+========================================================= */
+
+.project-card .project-planet {
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-planet {
+  transform:
+    scale(1.08)
+    rotate(4deg);
+}
+
+.project-card:hover
+.project-planet-surface {
+  box-shadow:
+    inset -30px -25px 45px
+      rgba(0, 0, 0, 0.85),
+
+    inset 12px 10px 25px
+      rgba(255, 255, 255, 0.14),
+
+    0 0 85px
+      color-mix(
+        in srgb,
+        var(--project-color) 42%,
+        transparent
+      );
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-card-content h3 {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card:hover
+.project-card-content h3 {
+  color: #ffffff;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   PROJECT BUTTONS
+========================================================= */
+
+.project-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.project-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 75%
+    );
+
+  transform:
+    translateX(-120%);
+
+  transition:
+    transform 0.5s ease;
+}
+
+.project-button:hover::before {
+  transform:
+    translateX(120%);
+}
+
+.project-button span {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   FEATURED PROJECT POLISH
+========================================================= */
+
+.featured-project {
+  transition:
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    transform 0.45s ease;
+}
+
+.featured-project:hover {
+  border-color:
+    rgba(168, 85, 247, 0.32);
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.32);
+}
+
+.featured-project-planet
+.project-planet {
+  transition:
+    transform 0.7s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.featured-project:hover
+.featured-project-planet
+.project-planet {
+  transform:
+    scale(1.04);
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .project-card,
+  .featured-project,
+  .project-planet,
+  .project-button,
+  .project-card-content h3 {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .featured-project:hover {
+    transform: none;
+  }
+}
+/* =========================================================
+   PROJECT TECH TAGS — PREMIUM
+========================================================= */
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.project-stack span {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 27px;
+
+  padding:
+    6px 10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  color: #85858d;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.04em;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-stack span:hover {
+  color: #ddd6fe;
+
+  border-color:
+    rgba(168, 85, 247, 0.35);
+
+  background:
+    rgba(139, 92, 246, 0.08);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* Featured project tags */
+
+.featured-project
+.project-stack span {
+  border-color:
+    rgba(168, 85, 247, 0.14);
+}
+
+.featured-project
+.project-stack span:hover {
+  border-color:
+    rgba(168, 85, 247, 0.40);
+
+  background:
+    rgba(139, 92, 246, 0.10);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+  .project-stack {
+    gap: 6px;
+  }
+
+  .project-stack span {
+    min-height: 25px;
+
+    padding:
+      5px 9px;
+
+    font-size: 7px;
+  }
+}
+/* =========================================================
+   NAVBAR — PREMIUM POLISH
+========================================================= */
+
+.navbar {
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.navbar-scrolled {
+  background:
+    rgba(3, 3, 5, 0.72);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 10px 40px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.navbar-links a {
+  position: relative;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.navbar-links a:not(.active) {
+  opacity: 0.65;
+}
+
+.navbar-links a:hover {
+  opacity: 1;
+
+  color: #ffffff;
+}
+
+.navbar-links a.active {
+  opacity: 1;
+}
+
+.navbar-links a.active::after {
+  transition:
+    width 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  transition:
+    transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform:
+    translateY(-1px);
+}
+
+.navbar-logo-mark {
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-logo:hover
+.navbar-logo-mark {
+  border-color:
+    rgba(168, 85, 247, 0.55);
+
+  background:
+    rgba(139, 92, 246, 0.10);
+
+  box-shadow:
+    0 0 20px
+    rgba(139, 92, 246, 0.16);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.navbar-status {
+  transition:
+    color 0.3s ease;
+}
+
+.navbar-status span {
+  animation:
+    navbarPulse
+    2s
+    ease-in-out
+    infinite;
+}
+
+@keyframes navbarPulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+
+    box-shadow:
+      0 0 5px
+      rgba(168, 85, 247, 0.35);
+  }
+
+  50% {
+    opacity: 1;
+
+    box-shadow:
+      0 0 12px
+      rgba(168, 85, 247, 0.85);
+  }
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.navbar-menu-button {
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-menu-button:hover {
+  color: #ffffff;
+
+  background:
+    rgba(139, 92, 246, 0.10);
+
+  border-color:
+    rgba(168, 85, 247, 0.35);
+
+  transform:
+    scale(1.04);
+}
+
+
+/* =========================================================
+   MOBILE MENU LINKS
+========================================================= */
+
+.navbar-mobile-links a {
+  transition:
+    color 0.25s ease,
+    padding-left 0.3s ease,
+    opacity 0.25s ease;
+}
+
+.navbar-mobile-links a:hover {
+  color: #ffffff;
+
+  padding-left: 8px;
+}
+
+.navbar-mobile-links a span {
+  transition:
+    color 0.25s ease;
+}
+
+.navbar-mobile-links a:hover span {
+  color: #a855f7;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.navbar-links a:focus-visible,
+.navbar-logo:focus-visible,
+.navbar-menu-button:focus-visible,
+.navbar-mobile-links a:focus-visible {
+  outline:
+    1px solid
+    rgba(192, 132, 252, 0.75);
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar,
+  .navbar-links a,
+  .navbar-logo,
+  .navbar-logo-mark,
+  .navbar-status,
+  .navbar-menu-button,
+  .navbar-mobile-links a {
+    transition: none;
+  }
+
+  .navbar-status span {
+    animation: none;
+  }
+}
+/* =========================================================
+   GLOBAL SMOOTH SCROLL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+
+/* =========================================================
+   SECTION SCROLL OFFSET
+========================================================= */
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+
+/* =========================================================
+   SMOOTH ANCHOR TRANSITIONS
+========================================================= */
+
+a[href^="#"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
