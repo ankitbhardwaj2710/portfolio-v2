@@ -248,7 +248,7 @@ export default function Hero() {
 
         <strong>FlatFlow</strong>
 
-        <small>01 / 04</small>
+        <small>01 / 06</small>
       </div>
 
       <div className="hero-scroll">
