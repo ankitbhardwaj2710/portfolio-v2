@@ -37,7 +37,7 @@ function Contact() {
         </p>
 
         <a
-          href="mailto:ankitbhardwaj2710@gmail.com"
+          href="mailto:ankitbhardwaj94684@gmail.com"
           className="contact-button"
         >
           <span>START A CONVERSATION</span>
