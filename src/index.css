@@ -7325,3 +7325,901 @@ body::before {
     font-size: 7px;
   }
 }
+/* =========================================================
+   GLOBAL RESPONSIVE POLISH
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent long text / links from creating horizontal overflow */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+span,
+strong,
+small {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hero,
+  .journey-section,
+  .projects-section,
+  .about-section,
+  .skills-section,
+  .contact-section {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-content,
+  .projects-heading,
+  .about-heading,
+  .skills-heading,
+  .contact-content {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .journey-section,
+  .projects-section,
+  .about-section,
+  .skills-section,
+  .contact-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Keep headings inside viewport */
+  .hero-title,
+  .projects-heading h2,
+  .about-heading h2,
+  .skills-heading h2,
+  .contact-content h2 {
+    max-width: 100%;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Better mobile paragraph readability */
+  .hero-description,
+  .projects-heading p,
+  .about-heading p,
+  .contact-description {
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  /* Buttons should never overflow */
+  .hero-buttons,
+  .project-actions {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .hero-button,
+  .project-actions a,
+  .contact-button {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .hero,
+  .journey-section,
+  .projects-section,
+  .about-section,
+  .skills-section,
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-title {
+    max-width: calc(100vw - 32px);
+  }
+
+  .hero-roles {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+/* =========================================================
+   SKILLS — MOBILE COSMIC LAYOUT
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .skills-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: hidden;
+  }
+
+  .skills-heading {
+    margin-bottom: 25px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(3.4rem, 15vw, 5rem);
+    line-height: 0.88;
+  }
+
+  .skills-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 340px;
+  }
+
+  /* -----------------------------------------
+     UNIVERSE
+     ----------------------------------------- */
+
+  .skills-universe {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin-top: 25px;
+    overflow: hidden;
+  }
+
+  /* Keep orbit lines subtle */
+  .skills-orbit {
+    opacity: 0.45;
+  }
+
+  .skills-orbit-1 {
+    width: 105%;
+    height: 42%;
+    left: -3%;
+    top: 29%;
+  }
+
+  .skills-orbit-2 {
+    width: 120%;
+    height: 55%;
+    left: -10%;
+    top: 22%;
+  }
+
+  .skills-orbit-3 {
+    width: 100%;
+    height: 75%;
+    left: 0;
+    top: 12%;
+  }
+
+  /* -----------------------------------------
+     CENTER BUILD STACK
+     ----------------------------------------- */
+
+  .skills-core {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  .skills-core-planet {
+    width: 125px;
+    height: 125px;
+  }
+
+  .skills-core-planet strong {
+    font-size: 24px;
+  }
+
+  .skills-core-planet span {
+    font-size: 9px;
+  }
+
+  .skills-core small {
+    margin-top: 18px;
+    font-size: 7px;
+  }
+
+  /* -----------------------------------------
+     PLANETS
+     ----------------------------------------- */
+
+  .skill-node {
+    position: absolute !important;
+    width: 95px;
+    height: auto;
+    transform: none !important;
+    z-index: 6;
+  }
+
+  .skill-node-planet {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+  }
+
+  .skill-node-planet span {
+    font-size: 15px;
+  }
+
+  .skill-node-info {
+    margin-top: 9px;
+    text-align: center;
+  }
+
+  .skill-node-info strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .skill-node-info small {
+    display: block;
+    margin-top: 5px;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+
+  /* -----------------------------------------
+     TOP ROW
+     ----------------------------------------- */
+
+  /* Dart */
+  .skill-node-2 {
+    top: 3%;
+    left: 14%;
+  }
+
+  /* Python */
+  .skill-node-7 {
+    top: 3%;
+    right: 14%;
+  }
+
+  /* -----------------------------------------
+     MIDDLE SIDES
+     ----------------------------------------- */
+
+  /* Flutter */
+  .skill-node-1 {
+    top: 29%;
+    left: 1%;
+  }
+
+  /* Node.js */
+  .skill-node-3 {
+    top: 29%;
+    right: 1%;
+  }
+
+  /* -----------------------------------------
+     BOTTOM ROW
+     ----------------------------------------- */
+
+  /* JavaScript */
+  .skill-node-5 {
+    bottom: 5%;
+    left: 3%;
+  }
+
+  /* Firebase */
+  .skill-node-6 {
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+
+  /* React */
+  .skill-node-4 {
+    bottom: 5%;
+    right: 3%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .skills-universe {
+    height: 620px;
+  }
+
+  .skill-node {
+    width: 88px;
+  }
+
+  .skill-node-planet {
+    width: 62px;
+    height: 62px;
+  }
+
+  .skill-node-planet span {
+    font-size: 14px;
+  }
+
+  .skill-node-info strong {
+    font-size: 12px;
+  }
+
+  .skills-core-planet {
+    width: 115px;
+    height: 115px;
+  }
+
+  .skills-core-planet strong {
+    font-size: 22px;
+  }
+
+  .skill-node-2 {
+    left: 8%;
+  }
+
+  .skill-node-7 {
+    right: 8%;
+  }
+
+  .skill-node-1 {
+    left: -2%;
+  }
+
+  .skill-node-3 {
+    right: -2%;
+  }
+}
+/* =========================================================
+   SKILLS — MOBILE COMPLETE LAYOUT
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  /* -------------------------------------------------------
+     SECTION
+     ------------------------------------------------------- */
+
+  .skills-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 100px 16px 70px;
+    overflow: hidden;
+  }
+
+  /* -------------------------------------------------------
+     HEADING
+     ------------------------------------------------------- */
+
+  .skills-heading {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(3.4rem, 15vw, 5rem);
+    line-height: 0.88;
+    letter-spacing: -0.06em;
+  }
+
+  .skills-heading p {
+    max-width: 340px;
+    margin-top: 22px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* =======================================================
+     SKILLS UNIVERSE
+     ======================================================= */
+
+  .skills-universe {
+    position: relative;
+
+    width: 100%;
+    height: 640px;
+
+    margin: 25px auto 0;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     ORBIT LINES
+     ------------------------------------------------------- */
+
+  .skills-orbit {
+    position: absolute;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+  }
+
+  .skills-orbit-1 {
+    width: 105%;
+    height: 48%;
+
+    left: -2%;
+    top: 26%;
+  }
+
+  .skills-orbit-2 {
+    width: 120%;
+    height: 58%;
+
+    left: -10%;
+    top: 21%;
+  }
+
+  .skills-orbit-3 {
+    width: 100%;
+    height: 72%;
+
+    left: 0;
+    top: 14%;
+  }
+
+
+  /* =======================================================
+     CENTER BUILD STACK
+     ======================================================= */
+
+  .skills-core {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+  }
+
+  .skills-core-planet {
+    width: 125px;
+    height: 125px;
+  }
+
+  .skills-core-planet span {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .skills-core-planet strong {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .skills-core small {
+    display: block;
+
+    margin-top: 17px;
+
+    font-size: 7px;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     COMMON SKILL PLANET
+     ======================================================= */
+
+  .skill-node {
+    position: absolute !important;
+
+    width: 92px;
+    height: auto;
+
+    transform: none !important;
+
+    z-index: 8;
+
+    text-align: center;
+  }
+
+  .skill-node-planet {
+    width: 66px;
+    height: 66px;
+
+    margin: 0 auto;
+
+    flex-shrink: 0;
+  }
+
+  .skill-node-planet span {
+    font-size: 15px;
+  }
+
+  .skill-node-info {
+    margin-top: 8px;
+
+    text-align: center;
+  }
+
+  .skill-node-info strong {
+    display: block;
+
+    color: #eeeeef;
+
+    font-size: 13px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+  }
+
+  .skill-node-info small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #686871;
+
+    font-size: 7px;
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  /* =======================================================
+     PLANET POSITIONS
+     
+     Balanced 6-point orbit + Firebase bottom center
+     ======================================================= */
+
+
+  /* -------------------------------------------------------
+     DART — TOP LEFT
+     ------------------------------------------------------- */
+
+  .skill-node-2 {
+    top: 7%;
+    left: 27%;
+  }
+
+
+  /* -------------------------------------------------------
+     PYTHON — TOP RIGHT
+     ------------------------------------------------------- */
+
+  .skill-node-7 {
+    top: 7%;
+    right: 27%;
+  }
+
+
+  /* -------------------------------------------------------
+     FLUTTER — LEFT
+     ------------------------------------------------------- */
+
+  .skill-node-1 {
+    top: 25%;
+    left: 4%;
+  }
+
+
+  /* -------------------------------------------------------
+     NODE.JS — RIGHT
+     ------------------------------------------------------- */
+
+  .skill-node-3 {
+    top: 25%;
+    right: 4%;
+  }
+
+
+  /* -------------------------------------------------------
+     JAVASCRIPT — BOTTOM LEFT
+     ------------------------------------------------------- */
+
+  .skill-node-5 {
+    bottom: 19%;
+    left: 5%;
+  }
+
+
+  /* -------------------------------------------------------
+     REACT — BOTTOM RIGHT
+     ------------------------------------------------------- */
+
+  .skill-node-4 {
+    bottom: 19%;
+    right: 5%;
+  }
+
+
+  /* -------------------------------------------------------
+     FIREBASE — BOTTOM CENTER
+     ------------------------------------------------------- */
+
+  .skill-node-6 {
+    bottom: 4%;
+    left: 50%;
+
+    transform: translateX(-50%) !important;
+  }
+
+
+  /* =======================================================
+     REMOVE EXCESSIVE ANIMATION MOVEMENT ON MOBILE
+     ======================================================= */
+
+  .skill-node,
+  .skill-node-planet {
+    will-change: transform;
+  }
+
+
+  /* =======================================================
+     CORE TECHNOLOGIES LIST
+     ======================================================= */
+
+  .skills-list {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .skills-list-header {
+    padding-bottom: 14px;
+
+    font-size: 9px;
+  }
+
+  .skill-row {
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+
+    padding: 18px 0;
+  }
+
+  .skill-row strong {
+    font-size: 17px;
+  }
+
+  .skill-row-type,
+  .skill-row-description,
+  .skill-row-level {
+    grid-column: 2;
+  }
+
+  .skill-row-type {
+    margin-top: 3px;
+
+    font-size: 8px;
+  }
+
+  .skill-row-description {
+    margin-top: 4px;
+
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .skill-row-level {
+    margin-top: 5px;
+
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     ECOSYSTEM
+     ======================================================= */
+
+  .skills-ecosystem {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-top: 70px;
+  }
+
+  .skills-ecosystem h3 {
+    font-size: 2.5rem;
+    line-height: 0.95;
+  }
+
+  .ecosystem-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+  }
+
+  .ecosystem-tags span {
+    min-height: 48px;
+
+    padding: 12px;
+
+    font-size: 10px;
+  }
+
+
+  /* =======================================================
+     END LINE
+     ======================================================= */
+
+  .skills-end {
+    margin-top: 60px;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .skills-end span {
+    width: 35px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .skills-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .skills-heading h2 {
+    font-size: 3.35rem;
+  }
+
+  .skills-heading p {
+    font-size: 12px;
+  }
+
+
+  /* Universe slightly smaller */
+  .skills-universe {
+    height: 610px;
+  }
+
+
+  /* Center */
+  .skills-core-planet {
+    width: 112px;
+    height: 112px;
+  }
+
+  .skills-core-planet strong {
+    font-size: 22px;
+  }
+
+
+  /* Skill planets */
+  .skill-node {
+    width: 86px;
+  }
+
+  .skill-node-planet {
+    width: 62px;
+    height: 62px;
+  }
+
+  .skill-node-planet span {
+    font-size: 14px;
+  }
+
+  .skill-node-info strong {
+    font-size: 12px;
+  }
+
+  .skill-node-info small {
+    font-size: 6.5px;
+  }
+
+
+  /* Top */
+  .skill-node-2 {
+    top: 8%;
+    left: 20%;
+  }
+
+  .skill-node-7 {
+    top: 8%;
+    right: 20%;
+  }
+
+
+  /* Sides */
+  .skill-node-1 {
+    top: 27%;
+    left: -1%;
+  }
+
+  .skill-node-3 {
+    top: 27%;
+    right: -1%;
+  }
+
+
+  /* Bottom */
+  .skill-node-5 {
+    bottom: 20%;
+    left: 0;
+  }
+
+  .skill-node-4 {
+    bottom: 20%;
+    right: 0;
+  }
+
+
+  /* Firebase */
+  .skill-node-6 {
+    bottom: 5%;
+  }
+
+
+  /* List */
+  .skill-row {
+    padding: 16px 0;
+  }
+
+  .skill-row strong {
+    font-size: 16px;
+  }
+
+
+  /* Ecosystem */
+  .ecosystem-tags {
+    gap: 6px;
+  }
+
+  .ecosystem-tags span {
+    padding: 10px;
+    font-size: 9px;
+  }
+}

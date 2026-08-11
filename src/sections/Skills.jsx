@@ -14,8 +14,9 @@ const coreSkills = [
   {
   name: "Node.js",
   type: "BACKEND",
-  category: "BACKEND",
+  level: "PRIMARY",
   className: "skill-node",
+  description: "Server-side JavaScript runtime",
 },
   {
     name: "React",
@@ -134,7 +135,7 @@ function Skills() {
       <div className="skills-list">
         <div className="skills-list-header">
           <span>CORE TECHNOLOGIES</span>
-          <span>06 / 06</span>
+          {/* <span>06 / 06</span> */}
         </div>
 
         {coreSkills.map((skill, index) => (
