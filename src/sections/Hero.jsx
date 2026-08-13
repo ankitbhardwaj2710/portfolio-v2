@@ -122,8 +122,11 @@ export default function Hero() {
     const handleMouseMove = (event) => {
       const rect = hero.getBoundingClientRect();
 
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      const x =
+        (event.clientX - rect.left) / rect.width - 0.5;
+
+      const y =
+        (event.clientY - rect.top) / rect.height - 0.5;
 
       gsap.to(contentRef.current, {
         x: x * 12,
@@ -169,25 +172,46 @@ export default function Hero() {
         ease: "power3.out",
       });
 
-      gsap.to([orbitOneRef.current, orbitTwoRef.current], {
-        x: 0,
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-      });
+      gsap.to(
+        [orbitOneRef.current, orbitTwoRef.current],
+        {
+          x: 0,
+          y: 0,
+          duration: 1.5,
+          ease: "power3.out",
+        }
+      );
     };
 
-    hero.addEventListener("mousemove", handleMouseMove);
-    hero.addEventListener("mouseleave", handleMouseLeave);
+    hero.addEventListener(
+      "mousemove",
+      handleMouseMove
+    );
+
+    hero.addEventListener(
+      "mouseleave",
+      handleMouseLeave
+    );
 
     return () => {
-      hero.removeEventListener("mousemove", handleMouseMove);
-      hero.removeEventListener("mouseleave", handleMouseLeave);
+      hero.removeEventListener(
+        "mousemove",
+        handleMouseMove
+      );
+
+      hero.removeEventListener(
+        "mouseleave",
+        handleMouseLeave
+      );
     };
   }, []);
 
   return (
-    <section ref={heroRef} className="hero" id="home">
+    <section
+      ref={heroRef}
+      className="hero"
+      id="home"
+    >
       <div
         ref={orbitOneRef}
         className="hero-orbit hero-orbit-one"
@@ -198,7 +222,10 @@ export default function Hero() {
         className="hero-orbit hero-orbit-two"
       />
 
-      <div ref={contentRef} className="hero-content">
+      <div
+        ref={contentRef}
+        className="hero-content"
+      >
         <div className="hero-status">
           <span />
           Available for work
@@ -210,11 +237,15 @@ export default function Hero() {
 
         <h1 className="hero-title">
           <span className="hero-title-mask">
-            <span className="hero-title-line">ANKIT</span>
+            <span className="hero-title-line">
+              ANKIT
+            </span>
           </span>
 
           <span className="hero-title-mask">
-            <span className="hero-title-line">BHARDWAJ</span>
+            <span className="hero-title-line">
+              BHARDWAJ
+            </span>
           </span>
         </h1>
 
@@ -227,38 +258,46 @@ export default function Hero() {
         </div>
 
         <p className="hero-description">
-          I build digital products and immersive experiences
-          where technology meets creativity.
+          I build digital products and immersive
+          experiences where technology meets
+          creativity.
         </p>
 
         <div className="hero-buttons">
-  <a
-    href="#projects"
-    className="hero-button primary"
-  >
-    <span>Explore my universe</span>
-    <span className="button-arrow">↗</span>
-  </a>
+          <a
+            href="#projects"
+            className="hero-button primary"
+          >
+            <span>Explore my universe</span>
+            <span className="button-arrow">
+              ↗
+            </span>
+          </a>
 
-  <a
-    href="#contact"
-    className="hero-button secondary"
-  >
-    Let's talk
-  </a>
+          <a
+            href="#contact"
+            className="hero-button secondary"
+          >
+            Let's talk
+          </a>
 
-  <a
-    href="/resume.pdf"
-    className="hero-button secondary"
-    download="Ankit-Bhardwaj-Resume.pdf"
-  >
-    <span>Download Resume</span>
-    <span className="button-arrow">↓</span>
-  </a>
-</div>
+          <a
+            href="/resume.pdf"
+            className="hero-button secondary"
+            download="Ankit-Bhardwaj-Resume.pdf"
+          >
+            <span>Download Resume</span>
+            <span className="button-arrow">
+              ↓
+            </span>
+          </a>
+        </div>
       </div>
 
-      <div ref={projectRef} className="hero-project">
+      <div
+        ref={projectRef}
+        className="hero-project"
+      >
         <span>Featured project</span>
 
         <strong>FlatFlow</strong>
@@ -268,7 +307,10 @@ export default function Hero() {
 
       <div className="hero-scroll">
         <span>Scroll to explore</span>
-        <span className="scroll-arrow">↓</span>
+
+        <span className="scroll-arrow">
+          ↓
+        </span>
       </div>
     </section>
   );

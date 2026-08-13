@@ -1,3 +1,5 @@
+import GitHubActivity from "./GitHubActivity";
+
 function About() {
   return (
     <section id="about" className="about-section">
@@ -22,7 +24,6 @@ function About() {
 
       {/* MAIN ABOUT */}
       <div className="about-universe">
-
         {/* CENTRAL PLANET */}
         <div className="about-core">
           <div className="about-orbit orbit-1" />
@@ -37,6 +38,11 @@ function About() {
             ANKIT
             <small>BHARDWAJ</small>
           </div>
+        </div>
+
+        {/* GITHUB ACTIVITY — UPPER RIGHT */}
+        <div className="about-github">
+          <GitHubActivity compact />
         </div>
 
         {/* LEFT CONTENT */}
@@ -92,7 +98,6 @@ function About() {
 
       {/* STATS */}
       <div className="about-stats">
-
         <div className="about-stat">
           <strong>06+</strong>
           <span>PROJECTS</span>
@@ -112,7 +117,6 @@ function About() {
           <strong>AI/ML</strong>
           <span>SPECIALIZATION</span>
         </div>
-
       </div>
 
       {/* CLOSING LINE */}
