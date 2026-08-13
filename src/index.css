@@ -9898,3 +9898,215 @@ a[href^="#"] {
     font-size: 6.5px;
   }
 }
+/* =========================================================
+   COSMIC SATELLITE — HERO
+========================================================= */
+
+.hero-satellite {
+  position: absolute;
+
+  top: 22%;
+  right: 8%;
+
+  width: 90px;
+  height: 90px;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  animation:
+    satellite-float 8s ease-in-out infinite,
+    satellite-drift 22s ease-in-out infinite alternate;
+}
+
+.satellite-body {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 30px;
+  height: 20px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(181, 108, 255, 0.75);
+
+  background: rgba(8, 7, 14, 0.18);
+
+  box-shadow:
+    0 0 10px rgba(181, 108, 255, 0.2),
+    inset 0 0 8px rgba(181, 108, 255, 0.08);
+
+  backdrop-filter: blur(2px);
+}
+
+/* solar panels */
+
+.satellite-panel {
+  position: absolute;
+
+  top: 4px;
+
+  width: 25px;
+  height: 12px;
+
+  border: 1px solid rgba(181, 108, 255, 0.45);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 32%,
+      rgba(181, 108, 255, 0.22) 33%,
+      transparent 35%,
+      transparent 65%,
+      rgba(181, 108, 255, 0.22) 66%,
+      transparent 68%
+    );
+}
+
+.satellite-panel-left {
+  right: 30px;
+}
+
+.satellite-panel-right {
+  left: 30px;
+}
+
+/* antenna */
+
+.satellite-antenna {
+  position: absolute;
+
+  left: 50%;
+  top: -10px;
+
+  width: 1px;
+  height: 10px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  transform: translateX(-50%);
+}
+
+.satellite-antenna::after {
+  content: "";
+
+  position: absolute;
+
+  top: -3px;
+  left: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border: 1px solid rgba(181, 108, 255, 0.8);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 6px rgba(181, 108, 255, 0.7);
+}
+
+/* tiny signal */
+
+.satellite-signal {
+  position: absolute;
+
+  right: -9px;
+  bottom: -5px;
+
+  width: 8px;
+  height: 8px;
+
+  border-right: 1px solid rgba(181, 108, 255, 0.45);
+  border-bottom: 1px solid rgba(181, 108, 255, 0.45);
+
+  border-radius: 0 0 8px 0;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   SATELLITE MOTION
+========================================================= */
+
+@keyframes satellite-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-5deg);
+  }
+
+  25% {
+    transform: translate3d(-35px, -18px, 0) rotate(2deg);
+  }
+
+  50% {
+    transform: translate3d(-10px, -42px, 0) rotate(6deg);
+  }
+
+  75% {
+    transform: translate3d(32px, -22px, 0) rotate(-2deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-5deg);
+  }
+}
+
+@keyframes satellite-drift {
+  0% {
+    margin-right: 0;
+  }
+
+  25% {
+    margin-right: 18px;
+  }
+
+  50% {
+    margin-right: -12px;
+  }
+
+  75% {
+    margin-right: 25px;
+  }
+
+  100% {
+    margin-right: 0;
+  }
+}
+
+.hero-satellite {
+  animation:
+    satellite-float 12s ease-in-out infinite,
+    satellite-drift 18s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-satellite {
+    top: 16%;
+    right: 5%;
+
+    width: 70px;
+    height: 70px;
+
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-satellite {
+    top: 13%;
+    right: 3%;
+
+    transform: scale(0.65);
+  }
+}

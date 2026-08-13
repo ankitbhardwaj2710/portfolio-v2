@@ -212,6 +212,15 @@ export default function Hero() {
       className="hero"
       id="home"
     >
+      {/* COSMIC SATELLITE */}
+<div className="hero-satellite" aria-hidden="true">
+  <div className="satellite-body">
+    <span className="satellite-panel satellite-panel-left" />
+    <span className="satellite-panel satellite-panel-right" />
+    <span className="satellite-antenna" />
+    <span className="satellite-signal" />
+  </div>
+</div>
       <div
         ref={orbitOneRef}
         className="hero-orbit hero-orbit-one"
