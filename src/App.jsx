@@ -1,9 +1,11 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Lenis from "lenis";
+
 import Navbar from "./components/Navbar";
 import CosmicBackground from "./components/CosmicBackground";
 import CursorSpark from "./components/CursorSpark";
 import Loader from "./components/Loader";
+
 import Hero from "./sections/Hero";
 import FlatFlow from "./sections/FlatFlow";
 import Journey from "./sections/Journey";
@@ -19,63 +21,70 @@ function App() {
     setLoading(false);
   }, []);
 
-  useState(() => {
+  /*
+   * Lenis smooth scrolling
+   *
+   * IMPORTANT:
+   * useEffect is used here instead of useState
+   * so the animation loop is properly cleaned up.
+   */
+  useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.9,
       smoothWheel: true,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 0.85,
+      lerp: 0.1,
     });
 
-    let frame;
+    let frameId;
 
     const raf = (time) => {
       lenis.raf(time);
-      frame = requestAnimationFrame(raf);
+
+      frameId = requestAnimationFrame(raf);
     };
 
-    frame = requestAnimationFrame(raf);
+    frameId = requestAnimationFrame(raf);
 
     return () => {
-      cancelAnimationFrame(frame);
+      cancelAnimationFrame(frameId);
       lenis.destroy();
     };
-  });
+  }, []);
 
   return (
     <>
-      {loading && <Loader onComplete={handleLoaderComplete} />}
+      {loading && (
+        <Loader onComplete={handleLoaderComplete} />
+      )}
 
-      <div className={loading ? "portfolio is-loading" : "portfolio"}>
+      <div
+        className={
+          loading
+            ? "portfolio is-loading"
+            : "portfolio"
+        }
+      >
         <CosmicBackground />
+
         <CursorSpark />
+
         <Navbar />
+
         <main>
           <Hero />
+
           <Journey />
+
           <Projects />
+
           {/* <FlatFlow /> */}
+
           <About />
+
           <Skills />
+
           <Contact />
-          {/* <section className="future-section" id="projects">
-            <span>02</span>
-            <h2>Projects from another orbit.</h2>
-          </section> */}
-
-          {/* <section className="future-section" id="about">
-            <span>03</span>
-            <h2>The human behind the code.</h2>
-          </section> */}
-
-          {/* <section className="future-section" id="skills">
-            <span>04</span>
-            <h2>My technology universe.</h2>
-          </section>
-
-          <section className="future-section" id="contact">
-            <span>05</span>
-            <h2>Let's build something extraordinary.</h2>
-          </section> */}
         </main>
       </div>
     </>
