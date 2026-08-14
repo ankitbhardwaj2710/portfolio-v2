@@ -10146,3 +10146,38 @@ body {
     scroll-behavior: auto !important;
   }
 }
+/* =========================================================
+   HERO — MOBILE TITLE FIX
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    width: 100%;
+  }
+
+  .hero-title-mask {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-title-line {
+    display: block;
+
+    white-space: nowrap;
+
+    width: max-content;
+
+    max-width: none;
+
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title-line {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+
+    letter-spacing: -0.055em;
+  }
+}
