@@ -929,13 +929,41 @@ body::before {
   }
 
   .hero-title {
-    margin-top: 13px;
+  margin-top: 13px;
 
-    font-size:
-      clamp(4.1rem, 17vw, 6.5rem);
+  width: 100%;
 
-    line-height: 0.82;
-  }
+  font-size:
+    clamp(3.2rem, 14vw, 5.2rem);
+
+  line-height: 0.84;
+
+  letter-spacing: -0.08em;
+
+  overflow: visible;
+}
+
+.hero-title-mask {
+  display: block;
+
+  width: 100%;
+
+  overflow: visible;
+}
+
+.hero-title-line {
+  display: block;
+
+  width: max-content;
+
+  white-space: nowrap;
+
+  max-width: none;
+
+  word-break: keep-all;
+
+  overflow-wrap: normal;
+}
 
   .hero-roles {
     margin-top: 22px;
@@ -1026,10 +1054,10 @@ body::before {
   }
 
   .hero-title {
-    font-size:
-      3.8rem;
-  }
+    font-size: 13.2vw;
 
+    letter-spacing: -0.085em;
+  }
   .hero-kicker {
     font-size: 7px;
   }
@@ -10147,37 +10175,82 @@ body {
   }
 }
 /* =========================================================
-   HERO — MOBILE TITLE FIX
+   FINAL MOBILE HERO TITLE FIX
 ========================================================= */
 
 @media (max-width: 768px) {
-  .hero-title {
+  .hero-content {
     width: 100%;
+    max-width: none;
+  }
+
+  .hero-title {
+    width: 100% !important;
+    max-width: none !important;
+
+    display: block;
+
+    overflow: visible;
+
+    white-space: normal;
   }
 
   .hero-title-mask {
     display: block;
-    width: 100%;
-    overflow: hidden;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    overflow: visible;
   }
 
   .hero-title-line {
     display: block;
 
-    white-space: nowrap;
+    width: 100% !important;
+    max-width: none !important;
 
-    width: max-content;
+    white-space: nowrap !important;
 
-    max-width: none;
+    font-size: clamp(3rem, 14vw, 4.6rem) !important;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.07em !important;
+
+    line-height: 0.9;
+
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 }
 
-@media (max-width: 420px) {
-  .hero-title-line {
-    font-size: clamp(3.4rem, 17vw, 5rem);
 
-    letter-spacing: -0.055em;
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+  .hero-title {
+    width: 100% !important;
+  }
+
+  .hero-title-line {
+    font-size: 13.5vw !important;
+
+    letter-spacing: -0.075em !important;
+
+    line-height: 0.88;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .hero-title-line {
+    font-size: 12.8vw !important;
+
+    letter-spacing: -0.08em !important;
   }
 }
